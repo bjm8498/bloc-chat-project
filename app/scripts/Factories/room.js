@@ -10,7 +10,7 @@
             all: rooms
         };
     }
-    
+        
     
     angular
         .module('blocChat')
