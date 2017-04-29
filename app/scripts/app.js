@@ -9,11 +9,11 @@
         
         $stateProvider
         
-            .state('room', {
+            .state('rooms', {
                 url:'/',
                 controller:'RoomCtrl as rooms',
-                template: '/Templates/rooms.html',
-        })
+                templateUrl: '/Templates/rooms.html'
+        });
     }
     
     
