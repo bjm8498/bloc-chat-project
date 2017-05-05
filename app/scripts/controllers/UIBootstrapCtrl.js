@@ -1,11 +1,11 @@
 ( function () {
     
     
-    function UIBootstrapCtrl (Modal) {
+    function UIBootstrapCtrl ($uibModal) {
         
     }
     
     angular
         .module('blocChat')
-        .controller('UIBootstrap', ['Modal', UIBootstrapCtrl]);
+        .controller('UIBootstrapCtrl', ['$uibModal', UIBootstrapCtrl]);
 })
