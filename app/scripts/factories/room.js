@@ -10,7 +10,7 @@
         
         Room.add = function (room) {
             
-            this.$add(room);
+            rooms.$add(room);
         }
         
         return Room;

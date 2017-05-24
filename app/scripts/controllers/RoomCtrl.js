@@ -3,7 +3,7 @@
     function RoomCtrl (Room) {
         
         this.rooms = Room.all;
-        console.log(rooms);
+        
     }
     
    
