@@ -10,4 +10,4 @@
     angular
         .module('blocChat')
         .controller('UIBootstrapCtrl',  ['$uibModal', ModalCtrl]);
-})
+})();
