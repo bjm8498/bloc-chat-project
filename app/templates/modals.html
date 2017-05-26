@@ -1,6 +1,10 @@
 <div>
 
-<button type="submit"></button>
+<button type="submit"
+        ng-controller="ModalCloseSubmitCtrl as mods"
+        ng-submit= "mods.ModalCloseSubmitCtrl.submit">Submit</button>
 
-
+<button type="button"
+        ng-controller="ModalCloseSubmit as mods"
+        ng-click= "mods.ModalCloseSubmitCtrl.close">Close</button>
 </div>
