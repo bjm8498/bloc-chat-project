@@ -7,13 +7,14 @@
         this.submit = function() {
             console.log("submitted!")
             var mobalInstance = $uibModal.submit({
-                templateUrl : '/templates/modals.html',
+                templateUrl : '/templates/rooms.html',
                 controller: 'ModalCloseSubmitCtrl',
                 controllerAs: 'modal'
             });
+        }
         
         this.close = function() {
-            console.log("Open sesame.")
+            console.log("Close successfully.")
             var mobalInstance = $uibModal.close({
                 templateUrl : '/templates/modals.html',
                 controller: 'ModalCloseSubmitCtrl',
