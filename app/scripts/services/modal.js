@@ -21,5 +21,5 @@
     
     angular
         .module('blocChat')
-        .factory('UIBootstrapCtrl',  ['$uibModal', modal]);
+        .service('modal',  ['$uibModal', modal]);
 })();
