@@ -1,14 +1,13 @@
 <div>
 
-<form
+<input type="submit"
         ng-controller="ModalCloseSubmitCtrl as mods"
         ng-submit= "mods.submit()">Submit room name.
-    <input type="text"/>
-    <input type="submit"/>
+
     
-    </form>
+    
 
 <button type="button"
-        ng-controller="ModalCloseSubmit as mods"
+        ng-controller="ModalCloseSubmitCtrl as mods"
         ng-click= "mods.close()">Close</button>
 </div>
