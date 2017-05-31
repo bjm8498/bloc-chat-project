@@ -8,7 +8,7 @@
             console.log("Open sesame.")
             var mobalInstance = $uibModal.open({
                 templateUrl : '/templates/modals.html',
-                controller: 'ModalCtrl',
+                controller: 'ModalCloseSubmitCtrl',
                 controllerAs: 'modal'
             });
             

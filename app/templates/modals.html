@@ -1,13 +1,16 @@
-<div>
-
-<input type="submit"
-        ng-controller="ModalCloseSubmitCtrl as mods"
-        ng-submit= "mods.submit()">Submit room name.
-
+<form ng-submit= "modal.submit()">
+    <div class="modal-header">
+        <h3 class="modal-title">Create a new room.</h3>
+    </div>
+    <input type="text"
+           ng-model="modal.roomName">
+    <input type="submit">        
+     
     
+    <button type="button"        
+        ng-click= "modal.close()">Close</button>
+    
+</form>  
     
 
-<button type="button"
-        ng-controller="ModalCloseSubmitCtrl as mods"
-        ng-click= "mods.close()">Close</button>
-</div>
+

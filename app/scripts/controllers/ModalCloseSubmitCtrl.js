@@ -1,19 +1,22 @@
 ( function () {
     
     
-    function ModalCloseSubmitCtrl ($uibModal, ModalCtrl) {
+    function ModalCloseSubmitCtrl ($uibModalInstance, Room) {
         
-        var modal = ModalCtrl;
+        
+        var controller = this;
         
         this.submit = function() {
-            console.log("submitted!")
-            $uibModal.submit(modal);
+            console.log("submitted!");
+            console.log(controller.roomName);
+            Room.add(controller.roomName);
+            $uibModalInstance.close();
             };
         
         
         this.close = function() {
             console.log("Closed successfully.")
-            $uibModal.close({$value: modal});
+            $uibModalInstance.dismiss('cancel');
             };
             
         
@@ -22,5 +25,5 @@
     
     angular
         .module('blocChat')
-        .controller('ModalCloseSubmitCtrl', ['$uibModal', 'ModalCtrl', ModalCloseSubmitCtrl]);
+        .controller('ModalCloseSubmitCtrl', ['$uibModalInstance', 'Room', ModalCloseSubmitCtrl]);
 })();
