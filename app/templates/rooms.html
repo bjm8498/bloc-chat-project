@@ -1,6 +1,7 @@
 
 <div class = "room-list"
      ng-repeat="room in roomController.rooms"
+     ng-click="Message.getRoomById()"
      >{{ room.$value }}</div>
 
 <div class = "button-open"
