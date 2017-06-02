@@ -1,8 +1,17 @@
 
-<div ng-repeat="room in roomController.rooms">{{ room.$value }}</div>
+<div class = "room-list"
+     ng-repeat="room in roomController.rooms"
+     >{{ room.$value }}</div>
 
-<div ng-controller ="ModalCtrl as mod">
+<div class = "button-open"
+     ng-controller ="ModalCtrl as mod">
 <button type="button"
             ng-click="mod.open()">Create new room</button>
     
 </div>
+
+<div class="chat-room"
+     ng-show="message.Message.getRoomById()"> {{ message.Message.getRoomById }}
+
+</div>
+
