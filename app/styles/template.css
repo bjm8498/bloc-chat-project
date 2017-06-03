@@ -1,0 +1,39 @@
+.room-list{
+    background: rgba(236, 231, 231, 0.8);
+    position: relative;
+    width: 8.1%;
+    padding: 3px;
+
+    
+}
+
+.button-open{
+    text-align: left;
+    color: darkslategrey;
+    padding-top: 5px;
+    font-weight: bold;
+
+}
+
+.modal-form{
+    
+    
+}
+
+.modal-title{
+    color: darkslategrey;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 36px;
+}
+
+.submit-entry{
+    align-content: left;
+    margin-bottom: 5px;
+    margin-right: 5px;
+
+}
+
+.submit-button{
+    margin-right: 5px;
+}
