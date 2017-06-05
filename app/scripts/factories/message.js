@@ -8,6 +8,10 @@
         console.log('Linked.')
         ref.orderByChild('messages').equalTo(roomId);
     }
+    
+    Message.send = function (newMessage) {
+        
+    }
 
     return Message;
   }
