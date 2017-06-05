@@ -1,0 +1,7 @@
+.chat-room{
+    background: rgba(236, 231, 231, 0.8);
+    background-position: center;
+    display: block;
+    height: 30%;
+    width: 45%;
+}

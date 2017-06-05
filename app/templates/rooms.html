@@ -11,8 +11,11 @@
     
 </div>
 
+<div class="chat-content-true"
+     ng-show="message.Room.getRoomById.length > 0">
 <div class="chat-room"
-     ng-show="message.Message.getRoomById()"> {{ message.Message.getRoomById }}
+     ng-repeat="chat in message.Message.getRoomById()"> {{ chat.$value }}
 
+</div>
 </div>
 
