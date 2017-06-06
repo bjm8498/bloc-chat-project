@@ -1,7 +1,7 @@
 
 <div class = "room-list"
      ng-repeat="room in roomController.rooms"
-     ng-click="Message.getRoomById()"
+     ng-click="mes.getRoomById()"
      >{{ room.$value }}</div>
 
 <div class = "button-open"
@@ -12,8 +12,10 @@
 </div>
 
 <div class="chat-content-true"
-     ng-show="message.Room.getRoomById.length > 0">
+     ng-controller="RoomCtrl as Room"
+     ng-show="Room.getRoomById.length > 0">
 <div class="chat-room"
+     ng-controller="MessageCtrl as message"
      ng-repeat="chat in message.Message.getRoomById()"> {{ chat.$value }}
 
 </div>
