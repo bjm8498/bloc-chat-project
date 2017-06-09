@@ -4,7 +4,12 @@
         
         this.rooms = Room.all;
         
-        this.mes = Message.getByRoomId;
+        this.mes = function (selectedRoom) {
+            console.log(Message.getByRoomId(selectedRoom.$id));
+            Message.getByRoomId(selectedRoom.$id);
+        
+        };
+        
     }
     
    

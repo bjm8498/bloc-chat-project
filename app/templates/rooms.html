@@ -1,8 +1,14 @@
 
 <div class = "room-list"
      ng-repeat="room in roomController.rooms"
-     ng-click="mes.getRoomById()"
-     >{{ room.$value }}</div>
+     
+     >
+    <button
+        ng-click="roomController.mes(room)"> 
+        {{ room.$value }} 
+    </button>
+
+</div>
 
 <div class = "button-open"
      ng-controller ="ModalCtrl as mod">
