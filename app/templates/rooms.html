@@ -1,4 +1,4 @@
-
+<div class="background-effect">
 <div class = "room-list"
      ng-repeat="room in roomController.rooms"
      
@@ -17,13 +17,16 @@
     
 </div>
 
+<br>
+<br>
+
 <div class="chat-content-true"
-     ng-controller="RoomCtrl as Room"
-     ng-show="Room.getRoomById.length > 0">
+     ng-show="roomController.mes.length > 0">
 <div class="chat-room"
-     ng-controller="MessageCtrl as message"
-     ng-repeat="chat in message.Message.getRoomById()"> {{ chat.$value }}
+     ng-repeat="chat in roomController.messages"> name: {{ chat.username }} <br> <br> content: {{ chat.content }} <br> <br> Time sent: {{ chat.sentAt }}
 
 </div>
+</div>
+
 </div>
 

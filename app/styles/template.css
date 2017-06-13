@@ -1,5 +1,5 @@
 .room-list{
-    background: rgba(236, 231, 231, 0.8);
+    background: rgba(236, 231, 231, 1);
     position: relative;
     width: 8.1%;
     padding: 3px;
@@ -8,6 +8,7 @@
 }
 
 .button-open{
+    opacity: 1;
     text-align: left;
     color: darkslategrey;
     padding-top: 5px;
@@ -21,6 +22,7 @@
 }
 
 .modal-title{
+    opacity: 1;
     color: darkslategrey;
     font-weight: bolder;
     text-decoration: underline;
@@ -28,6 +30,7 @@
 }
 
 .submit-entry{
+    opacity: 1;
     align-content: left;
     margin-bottom: 5px;
     margin-right: 5px;

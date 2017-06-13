@@ -1,5 +1,26 @@
 body {
+    background-color:azure;
+}
+
+
+.background-effect{
+    min-height: 600px;
+    min-width: 400px;
+    position: relative;
     background-image: url(../assets/images/background.jpg);
-    background-repeat: repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
     
+}
+
+.chat-content-true{
+    vertical-align: middle;
+    align-self: center;
+    background-color: aliceblue;
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    min-height: 300px;
+    font-size: 16;
+}
