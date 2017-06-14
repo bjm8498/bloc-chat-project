@@ -9,9 +9,6 @@
         
         var filterdMessage = $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
         
-        console.log('Linked.');
-        console.log(filterdMessage);
-        //return $firebaseArray(ref.orderByChild('messages').equalTo(roomId));//
         return filterdMessage;
     }
 
