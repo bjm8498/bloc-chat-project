@@ -1,19 +1,24 @@
-<form class="modal-form"
+<form class="modal-form form-inline"
       ng-submit= "modal.submit()">
+    <div class="form-group">
     <div class="modal-header">
-        <h3 class="modal-title">Create a new room.</h3>
+        <h3 class="modal-title">Create a New Room</h3>
     </div>
-    <input class="submit-entry"
+    <br>
+    <input class="submit-entry form-control"
            type="text"
+           placeholder="Enter new room name"
            ng-model="modal.roomName">
     
-    <input class="submit-button"
-           type="submit">        
+    <button class="submit-button btn btn-primary"
+           type="submit">Submit</button>    
      
     
-    <button class="close-button"
+    <div class="close-button btn btn-primary"
             type="button"        
-        ng-click= "modal.close()">Close</button>
+        ng-click= "modal.close()">Close</div>
+        
+        </div>
     
 </form>  
     

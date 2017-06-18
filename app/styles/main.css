@@ -1,26 +1,34 @@
 body {
-    background-color:azure;
-}
-
-
-.background-effect{
     min-height: 600px;
     min-width: 400px;
     position: relative;
     background-image: url(../assets/images/background.jpg);
-    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 1;
     
 }
 
+
+.background-effect{
+
+}
+
 .chat-content-true{
+    -webkit-text-fill-color: blue;
+    font-weight: bold; 
+    text-align: center;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: antiquewhite; 
+    border-spacing: 3px;
+    position: fixed;
+    overflow: auto;
     vertical-align: middle;
     align-self: center;
-    background-color: aliceblue;
-    display: inline-block;
-    text-align: left;
-    max-width: 400px;
+    display: inline;
+    box-shadow: 1px 1px;
+    min-width: 400px;
     min-height: 300px;
-    font-size: 16;
+    font-size: 28;
 }

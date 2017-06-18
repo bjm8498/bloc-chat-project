@@ -1,9 +1,13 @@
 .room-list{
-    background: rgba(236, 231, 231, 1);
+
     position: relative;
-    width: 8.1%;
     padding: 3px;
 
+    
+}
+
+.room-list .btn .btn-primary{
+    
     
 }
 
@@ -17,13 +21,16 @@
 }
 
 .modal-form{
-    
+    border-radius: 3px;
+    box-shadow: 8px 8px 7px #000000;
+    text-align: center;
+    font-family: helvetica;
+    background-image: url(../assets/images/background.jpg);
     
 }
 
 .modal-title{
     opacity: 1;
-    color: darkslategrey;
     font-weight: bolder;
     text-decoration: underline;
     font-size: 36px;

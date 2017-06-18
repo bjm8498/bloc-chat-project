@@ -1,32 +1,44 @@
 <div class="background-effect">
-<div class = "room-list"
-     ng-repeat="room in roomController.rooms"
-     
-     >
-    <button
-        ng-click="roomController.mes(room)"> 
-        {{ room.$value }} 
-    </button>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class = "room-list btn btn-primary btn-block"
+                     ng-repeat="room in roomController.rooms">
+                        <div
+                            ng-click="roomController.mes(room)"> 
+                            {{ room.$value }} 
+                        </div>
+                </div>
+                <br>
 
-</div>
-
-<div class = "button-open"
-     ng-controller ="ModalCtrl as mod">
-<button type="button"
-            ng-click="mod.open()">Create new room</button>
+                <div class = "button-open btn btn-primary"
+                    ng-controller ="ModalCtrl as mod">
+                <div ng-click="mod.open()">Create new room</div>
     
-</div>
+                </div>
+            </div>
+        </div>
+    
 
-<br>
-<br>
+            <br>
+            <br>
 
-<div class="chat-content-true"
-     ng-show="roomController.mes.length > 0">
-<div class="chat-room"
-     ng-repeat="chat in roomController.messages"> name: {{ chat.username }} <br> <br> content: {{ chat.content }} <br> <br> Time sent: {{ chat.sentAt }}
+                <div class="chat-content-true"
+                    ng-show="roomController.mes.length > 0">
+                <div class="chat-room"
+                    ng-repeat="chat in roomController.messages">
+                    <br>
+                    <div class="name text-left "><mark>name: {{ chat.username }}</mark></div> 
+                    <br> 
+                    <div class="content text-left"><mark>content: {{ chat.content }}</mark></div>
+                    <br> 
+                    <br> 
+                    <div class="time text-right"><mark>Time sent: {{ chat.sentAt }}</mark>
+                    </div>
 
-</div>
-</div>
-
+                </div>
+                </div>
+    </div>
 </div>
 
