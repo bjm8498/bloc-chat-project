@@ -1,11 +1,24 @@
+<form class="new-user-form form-inline"
+      ng-submit="addUser.submit()">
+
 <div class="new-user-header">
-    <h5>Enter user name.</h5>
-    
-    <input type="text">
-    
-    
-    <input type="submit"
-           ng-model="addUser.username">
-    
-    
+    <h3>Enter user name</h3>
 </div>
+
+
+
+<input type="text"
+       placeholder="Enter new user."
+       ng-model="addUser.submit">
+    
+    
+<button class="btn btn-primary"
+        type="submit"
+        >Submit</button>
+
+<div class="btn btn-primary"
+     type="button"        
+     ng-click= "addUser.close()">Close</div>
+    
+    
+</form>
