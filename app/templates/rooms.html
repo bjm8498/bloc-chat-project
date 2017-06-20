@@ -25,7 +25,8 @@
             <br>
 
                 <div class="chat-content-true"
-                    ng-show="roomController.mes.length > 0">
+                    ng-show="roomController.mes.length > 0"
+                    ng-hide="roomController.mes.length <= 0">
                 <div class="chat-room"
                     ng-repeat="chat in roomController.messages">
                     <br>
