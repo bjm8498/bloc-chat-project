@@ -1,11 +1,12 @@
 ( function () {
     
-  function addUser ($uibModalInstance, userName) {
+  function addUserCtrl ($uibModalInstance, userName) {
       
       var scope = this;
       
       this.submit = function() {
-            userName.add(scope.username);
+//          console.log('clicked.')
+//            userName.add(scope.username);
             $uibModalInstance.close();
             };
         
@@ -17,6 +18,6 @@
    
     angular
         .module('blocChat')
-        .controller('addUser',['$uibModalInstance', 'userName', addUser]);
+        .controller('addUserCtrl',['$uibModalInstance', 'userName', addUserCtrl]);
     
 })();
