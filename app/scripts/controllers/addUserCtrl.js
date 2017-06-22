@@ -5,8 +5,8 @@
       var scope = this;
       
       this.submit = function() {
-//          console.log('clicked.')
-//            userName.add(scope.username);
+            console.log(this);
+            userName.addUser(scope.username);
             $uibModalInstance.close();
             };
         

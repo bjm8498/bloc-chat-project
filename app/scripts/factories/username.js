@@ -2,15 +2,15 @@
     
   function userName ($firebaseArray) {
     var userName = {};
-    var ref = firebase.database().ref().child("blocChatCurrentUser");
+    var ref = firebase.database().ref().child("messages");
     var name = ref.child('username');
-      
+    var fire = $firebaseArray(name);
       
     
     
    userName.addUser = function (user) {
        
-       user.$add($firebaseArray(ref));
+       fire.$add(user);
    }; 
     
 

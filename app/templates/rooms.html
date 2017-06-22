@@ -25,20 +25,22 @@
             <br>
 
                 <div class="chat-content-true"
-                    ng-show="roomController.mes.length > 0"
-                    ng-hide="roomController.mes.length <= 0">
-                <div class="chat-room"
-                    ng-repeat="chat in roomController.messages">
-                    <br>
-                    <div class="name text-left "><mark>name: {{ chat.username }}</mark></div> 
-                    <br> 
-                    <div class="content text-left"><mark>content: {{ chat.content }}</mark></div>
-                    <br> 
-                    <br> 
-                    <div class="time text-right"><mark>Time sent: {{ chat.sentAt }}</mark>
-                    </div>
+                    ng-hide="roomController.messages.length <= 0"
+                    ng-show="roomController.messages.length > 0">   
+                    
+                    <div class="chat-room"
+                        ng-repeat="chat in roomController.messages">
+                        
+                        <br>
+                        <div class="name text-left "><mark>name: {{ chat.username }}</mark></div> 
+                        <br> 
+                        <div class="content text-left"><mark>content: {{ chat.content }}</mark></div>
+                        <br> 
+                        <br> 
+                        <div class="time text-right"><mark>Time sent: {{ chat.sentAt }}</mark>
+                        </div>
 
-                </div>
+                    </div>
                 </div>
     </div>
 </div>
