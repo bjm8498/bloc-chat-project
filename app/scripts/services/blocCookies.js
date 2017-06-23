@@ -3,7 +3,7 @@
   function blocCookies ($cookies, $uibModal) {
       
     var currentUser = $cookies.get('username');
-      
+    console.log('currentuser:', currentUser);  
     if (!currentUser || currentUser === '') {
         
       $uibModal.open({

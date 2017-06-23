@@ -4,21 +4,17 @@
       
       var scope = this;
       
-      scope.submit = function(userName) {
+      scope.submit = function () {
             console.log(this);
-            $cookies.put('username', userName);
+            $cookies.put('username', scope.username);
             if($cookies.get('username')) {
-                alert("Hello " + userName);
-                
+                alert("Hello " + scope.username);
+                $uibModalInstance.dismiss('Done');
             } else {
                 alert('Enter a username!');
             }
             }
-    scope.finish = function () {
-        if($cookies.get('username')) {
-            $uibModalInstance.dismiss('Done');
-        }
-    }
+
         
   }  
    
