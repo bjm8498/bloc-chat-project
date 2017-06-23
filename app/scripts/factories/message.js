@@ -16,6 +16,10 @@
         
         messages.$add(newMessage);
     }
+    
+    Message.send = function (newMessage) {
+        
+    }
 
     return Message;
   }
