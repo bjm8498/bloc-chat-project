@@ -1,20 +1,22 @@
 ( function () {
     
-  function BlocChatCookies ($cookies, $uibModal) {
+  function blocCookies ($cookies, $uibModal) {
       
-    var currentUser = $cookies.get('blocChatCurrentUser');
+    var currentUser = $cookies.get('username');
       
     if (!currentUser || currentUser === '') {
         
       $uibModal.open({
                 templateUrl: '/templates/newuser.html',
                 controller: 'addUserCtrl',
-                controllerAs: 'addUser'
+                controllerAs: 'addUser',
+                backdrop: 'static',
+                keyboard: false
       })
     }
   }
-
+ 
   angular
     .module('blocChat')
-    .run(['$cookies', '$uibModal', BlocChatCookies]);
+    .run(['$cookies', '$uibModal', blocCookies]);
 })();

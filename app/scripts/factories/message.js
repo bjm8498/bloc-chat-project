@@ -12,6 +12,10 @@
         return filterdMessage;
     }
     
+    Message.send = function (newMessage) {
+        
+        messages.$add(newMessage);
+    }
 
     return Message;
   }

@@ -1,23 +1,29 @@
 ( function () {
     
-  function addUserCtrl ($uibModalInstance, userName) {
+  function addUserCtrl ($uibModalInstance, $cookies) {
       
       var scope = this;
       
-      this.submit = function() {
+      scope.submit = function(userName) {
             console.log(this);
-            userName.addUser(scope.username);
-            $uibModalInstance.close();
-            };
+            $cookies.put('username', userName);
+            if($cookies.get('username')) {
+                alert("Hello " + userName);
+                
+            } else {
+                alert('Enter a username!');
+            }
+            }
+    scope.finish = function () {
+        if($cookies.get('username')) {
+            $uibModalInstance.dismiss('Done');
+        }
+    }
         
-        
-      this.close = function() {
-            $uibModalInstance.dismiss('cancel');
-            };
   }  
    
     angular
         .module('blocChat')
-        .controller('addUserCtrl',['$uibModalInstance', 'userName', addUserCtrl]);
+        .controller('addUserCtrl',['$uibModalInstance', '$cookies',  addUserCtrl]);
     
 })();
