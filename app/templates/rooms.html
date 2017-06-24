@@ -3,45 +3,57 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
-                <div class = "room-list btn btn-primary btn-block"
-                     ng-repeat="room in roomController.rooms">
+                    <div class = "room-list btn btn-primary btn-block"
+                        ng-repeat="room in roomController.rooms">
                         <div
                             ng-click="roomController.mes(room)"> 
                             {{ room.$value }} 
                         </div>
-                </div>
+                    </div>
                 <br>
 
-                <div class = "button-open btn btn-primary"
-                    ng-controller ="ModalCtrl as mod">
-                <div ng-click="mod.open()">Create new room</div>
+                    <div class = "button-open btn btn-primary btn-block"
+                        ng-controller ="ModalCtrl as mod">
+                    <div ng-click="mod.open()">Create new room</div>
     
-                </div>
+                    </div>
+                
+                    <div class="button-open btn btn-primary btn-block"
+                         ng-controller = "sendMessageCtrl as messageSend">
+                    <div ng-click="messageSend.open()">Enter a new message</div>
+                        
+                    </div>
+
+
+                    <br>
+                    <br>
+
+                    <div class="chat-content-true"
+                        ng-hide="roomController.messages.length <= 0"
+                        ng-show="roomController.messages.length > 0">   
+
+                        <div class="chat-room"
+                            ng-repeat="chat in roomController.messages">
+
+                            <br>
+                            <div class="name text-left "><mark>name: {{ chat.username }}</mark></div> 
+                            <br> 
+                            <div class="content text-left"><mark>content: {{ chat.content }}</mark></div>
+                            <br> 
+                            <br> 
+                            <div class="time text-right"><mark>Time: {{ chat.sentAt }}</mark>
+                            </div>
+                            
+                            <br>
+                            <br>
+                            
+
+                        </div>
+                    </div>
+                
             </div>
         </div>
     
-
-            <br>
-            <br>
-
-                <div class="chat-content-true"
-                    ng-hide="roomController.messages.length <= 0"
-                    ng-show="roomController.messages.length > 0">   
-                    
-                    <div class="chat-room"
-                        ng-repeat="chat in roomController.messages">
-                        
-                        <br>
-                        <div class="name text-left "><mark>name: {{ chat.username }}</mark></div> 
-                        <br> 
-                        <div class="content text-left"><mark>content: {{ chat.content }}</mark></div>
-                        <br> 
-                        <br> 
-                        <div class="time text-right"><mark>Time sent: {{ chat.sentAt }}</mark>
-                        </div>
-
-                    </div>
-                </div>
     </div>
 </div>
 

@@ -1,15 +1,15 @@
 ( function () {
     
     
-    function sendMessageCtrl ($uibModal, $cookies) {
+    function sendMessageCtrl ($uibModal) {
         
         
         this.open = function() {
             
             var modal = $uibModal.open({
-                templateUrl : '/templates/modals.html',
-                controller: 'ModalCloseSubmitCtrl',
-                controllerAs: 'modal'
+                templateUrl : '/templates/message.html',
+                controller: 'MessageCtrl',
+                controllerAs: 'sendMessage'
             });
             
         
@@ -18,5 +18,5 @@
     
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['$uibModal', ModalCtrl]);
+        .controller('sendMessageCtrl', ['$uibModal', sendMessageCtrl]);
 })();

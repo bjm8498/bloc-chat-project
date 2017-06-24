@@ -32,3 +32,7 @@ body {
     min-height: 300px;
     font-size: 28;
 }
+
+.chat-content-true: empty{
+    border: none;  
+}

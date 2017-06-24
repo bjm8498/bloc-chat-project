@@ -2,7 +2,7 @@
     
     function MessageCtrl (Message) {
         
-        this.mes = Message;
+        this.mes = Message.send;
     }
     
     angular

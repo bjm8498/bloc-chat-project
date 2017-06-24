@@ -9,7 +9,9 @@
             var mobalInstance = $uibModal.open({
                 templateUrl : '/templates/modals.html',
                 controller: 'ModalCloseSubmitCtrl',
-                controllerAs: 'modal'
+                controllerAs: 'modal',
+                backdrop: 'static',
+                keyboard: false
             });
             
         
