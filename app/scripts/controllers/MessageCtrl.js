@@ -1,11 +1,11 @@
 ( function () {
     
-    function MessageCtrl (Message) {
+    function MessageCtrl (Message, $cookies) {
         
         this.mes = Message.send;
     }
     
     angular
         .module('blocChat')
-        .controller('MessageCtrl', ['Message', MessageCtrl]);
+        .controller('MessageCtrl', ['Message', '$cookies', MessageCtrl]);
 })();

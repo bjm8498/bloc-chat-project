@@ -8,7 +8,7 @@
             
             var modal = $uibModal.open({
                 templateUrl : '/templates/message.html',
-                controller: 'MessageCtrl',
+                controller: 'RoomCtrl',
                 controllerAs: 'sendMessage'
             });
             

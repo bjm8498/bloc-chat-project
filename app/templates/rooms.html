@@ -18,12 +18,25 @@
     
                     </div>
                 
-                    <div class="button-open btn btn-primary btn-block"
-                         ng-controller = "sendMessageCtrl as messageSend">
-                    <div ng-click="messageSend.open()">Enter a new message</div>
-                        
+                <form class="form-inline"
+                      ng-controller="RoomCtrl as room"
+                      ng-submit="room.send()">
+                    <div class="modal-header">
                     </div>
-
+    
+                    <input class="submit-entry form-control"
+                           type='text'
+                           placeholder='Enter a new message'
+                           ng-model='room.message'>
+        
+                    <button class="submit-button btn btn-primary"
+                            type="submit">Submit</button>
+                
+    
+    
+    
+    
+</form>
 
                     <br>
                     <br>
@@ -32,7 +45,7 @@
                         ng-hide="roomController.messages.length <= 0"
                         ng-show="roomController.messages.length > 0">   
 
-                        <div class="chat-room"
+                        <div class="chat-room col-md-12"
                             ng-repeat="chat in roomController.messages">
 
                             <br>

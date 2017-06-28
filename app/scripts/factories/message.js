@@ -14,11 +14,11 @@
     
     
     Message.send = function (newMessage) {
-        console.log('I am here.');
-        messages.add({
-            username: $cookies.get('username'),
-            content: newMessage.toString(),
-            roomId: Message.getByRoomId(roomId),
+        console.log(newMessage);
+        messages.$add({
+            username: newMessage.username,
+            content: newMessage.content,
+            roomId: newMessage.roomId,
             sentAt: new Date().toUTCString()
         });
     
