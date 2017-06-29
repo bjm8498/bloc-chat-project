@@ -19,15 +19,14 @@
                     </div>
                 
                 <form class="form-inline"
-                      ng-controller="RoomCtrl as room"
-                      ng-submit="room.send()">
+                      ng-submit="roomController.send()">
                     <div class="modal-header">
                     </div>
     
                     <input class="submit-entry form-control"
                            type='text'
                            placeholder='Enter a new message'
-                           ng-model='room.message'>
+                           ng-model='roomController.message'>
         
                     <button class="submit-button btn btn-primary"
                             type="submit">Submit</button>
