@@ -9,18 +9,16 @@
         this.currentRoom = null;
                 
         this.mes = function (selectedRoom) {
-            console.log(selectedRoom);
             this.currentRoom = selectedRoom;
             this.messages = Message.getByRoomId(selectedRoom.$id);
         
         };
         
         this.send = function () {
-            console.log(this);
             Message.send({
                 content: this.message,
                 username: $cookies.get('username'),
-                roomId: Room.currentRoom.$id
+                roomId: this.currentRoom.$id
             });
         }
         

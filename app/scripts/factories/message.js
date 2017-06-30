@@ -14,7 +14,6 @@
     
     
     Message.send = function (newMessage) {
-        console.log(newMessage);
         messages.$add({
             username: newMessage.username,
             content: newMessage.content,
