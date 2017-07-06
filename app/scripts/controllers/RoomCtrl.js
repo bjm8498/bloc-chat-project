@@ -20,6 +20,7 @@
                 username: $cookies.get('username'),
                 roomId: this.currentRoom.$id
             });
+            this.message = '';
         }
         
     }
